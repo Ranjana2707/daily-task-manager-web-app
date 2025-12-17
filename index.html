@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- App Header -->
+  <header class="app-header" role="banner">
+    <h1>Daily Task Manager</h1>
+    <p class="subtitle">Plan. Complete. Repeat.</p>
+  </header>
+
+  <!-- Main App Container -->
+  <main class="container" role="main">
+    <!-- Task Input Form -->
+    <section class="task-input" aria-label="Add new task">
+      <form id="task-form" autocomplete="off">
+        <label for="task-input" class="visually-hidden">Task name</label>
+        <input
+          id="task-input"
+          name="task"
+          type="text"
+          placeholder="e.g., Read 10 pages, 6 PM"
+          aria-label="Task name"
+          required
+        />
+        <button id="add-btn" type="submit" aria-label="Add task">Add</button>
+      </form>
+    </section>
+
+    <!-- Task List -->
+    <section class="task-list-section" aria-label="Task list">
+      <ul id="task-list" class="task-list" role="list">
+        <!-- Tasks are rendered here -->
+      </ul>
+
+      <!-- Empty state (hidden when tasks exist) -->
+      <div id="empty-state" class="empty-state" aria-live="polite">
+        <p>No tasks yet. Add your first task above.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- App Footer -->
+  <footer class="app-footer" role="contentinfo">
+    <small>
+      Built with HTML, CSS, and JavaScript. Tasks are saved automatically with LocalStorage.
+    </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
